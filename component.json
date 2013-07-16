@@ -1,9 +1,0 @@
-{
-  "name": "DragonLayer",
-  "version": "1.0.0",
-  "dependencies": {
-    "jquery": "latest",
-    "modernizr": "latest",
-    "sass-bootstrap": "latest"
-  }
-}
