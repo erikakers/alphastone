@@ -208,6 +208,8 @@ module.exports = function(grunt) {
     });
 
     //Grunt Tasks
+    grunt.registerTask('default', ['dev', 'server']);
+    
     grunt.registerTask('server', ['connect:livereload', 'open', 'watch']);
     grunt.registerTask('compile', ['compass', 'coffee']);
     grunt.registerTask('dev', ['concat', 'copy:dev']);
