@@ -1,0 +1,36 @@
+$mobile-small: 		525px 	!default
+$mobile-medium: 	650px 	!default
+$tablet-portrait: 	768px 	!default
+$tablet-landscape: 	1024px 	!default
+$desktop: 			1200px 	!default
+ 
+ 
+@mixin breakpoint($point)
+	@if $point == mobile
+		@media screen and (max-width: $tablet-landscape - 1)
+			@content
+ 
+	@else if $point == mobile-med
+		@media screen and (max-width: $mobile-medium)
+			@content
+ 
+	@else if $point == mobile-sm
+		@media screen and (max-width: $mobile-small)
+			@content
+ 
+	@else if $point == tablet
+		@media screen and (max-width: $tablet-landscape - 1) and (min-width: $tablet-portrait)
+			@content
+ 
+	@else if $point == desktop
+		@media screen and (min-width : $mq-tablet-landscape + 1) and (max-width : $desktop)
+			@content
+ 
+	@else if $point == desktop-lg
+		@media screen and (min-width: $desktop + 1)
+			@content
+ 
+
+@mixin retina
+	@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5)
+		@content
