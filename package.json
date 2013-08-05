@@ -1,7 +1,8 @@
 {
-  "name": "DragonLayer",
+  "name": "Alphastone",
   "version": "1.0.0",
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "grunt": "latest",
     "matchdep": "~0.1.1",
