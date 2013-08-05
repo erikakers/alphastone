@@ -2,10 +2,7 @@
   "name": "DragonLayer",
   "version": "1.0.0",
   "dependencies": {
-  	"modernizr": "latest",
-  	"yepnope": "latest",
-    "jquery": "latest",
-    "lodash": "latest",
+    "jquery": "1.10.2",
     "bootstrap": "latest"
   }
 }
