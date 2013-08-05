@@ -28,6 +28,10 @@ module.exports = function(grunt) {
                 files: ['<%= base.src %>/coffee/{,*/}*.coffee'],
                 tasks: 'coffee'
             },
+            javascript: {
+                files: ['<%= base.src %>/javascript/{,*/}*.js'],
+                tasks: 'concat:dev'
+            },
             livereload: {
                 options: {
                     livereload: LIVERELOAD_PORT
@@ -103,7 +107,7 @@ module.exports = function(grunt) {
 
         // Start Dev Tasks
         concat: {
-            dev: {
+            vendor: {
                 files: [
                     // List any additional files that will be concatted into a single file
                     // Follow the same object pattern if a secondary concatted file is needed
@@ -111,10 +115,21 @@ module.exports = function(grunt) {
                     {
                         src: [
                             '<%= base.src %>/packages/jquery/jquery.js',
-                            '<%= base.src %>/packages/lodash/lodash.js',
-                            '<%= base.src %>/packages/yepnope/yepnope.js'
+                            '<%= base.src %>/packages/bootstrap/dist/js/bootstrap.js',
                         ],
-                        dest: '<%= base.build %>/js/vendor/compiled.js'
+                        dest: '<%= base.build %>/js/vendor/plugins.js'
+                    }
+                ]
+            },
+            dev: {
+                files: [
+                    {
+                        src: [
+                            '<%= base.src %>/javascript/main.js',
+                            '<%= base.src %>/javascript/modules/sample-module.js',
+                            '<%= base.src %>/javascript/init.js'
+                        ],
+                        dest: '<%= base.build %>/js/main.js'
                     }
                 ]
             }
@@ -127,11 +142,11 @@ module.exports = function(grunt) {
                     // ie. files that are managed with Bower but need to be moved to the 
                     // htdocs directory
                     {
-                        src: '<%= base.src %>/packages/bootstrap/docs/assets/css/bootstrap.css',
+                        src: '<%= base.src %>/packages/bootstrap/dist/css/bootstrap.css',
                         dest: '<%= base.build %>/css/bootstrap.css'
                     },
                     {
-                        src: '<%= base.src %>/packages/modernizr/modernizr.js',
+                        src: '<%= base.src %>/javascript/vendor/modernizr.js',
                         dest: '<%= base.build %>/js/vendor/modernizr.js'
                     }
                 ]
