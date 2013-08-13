@@ -1,15 +1,19 @@
-// THIS FILE IS COMPILED VIA GRUNT. ANY CHANGES MADED TO MAIN.JS WITHIN THE 
-// HTDOCS FOLDER WILL GET OVERWRITTEN, SO DON'T DO THAT. 
+// THIS FILE IS COMPILED VIA GRUNT. ANY CHANGES MADED TO MAIN.JS WITHIN THE
+// HTDOCS FOLDER WILL GET OVERWRITTEN, SO DON'T DO THAT.
 
-// Complete all of your development using a file with your name, ie. (name.js). 
-// When what you are working on is completed it will be merged into 
-// the main.js master file. 
+// Complete all of your development using a file with your name, ie. (name.js).
+// When what you are working on is completed it will be merged into
+// the main.js master file.
 
 // Global Name Space
 
-window.App = window.App || {},
-App.helpers = App.helpers || {},
-App.features = App.features || {};
+window.App = {
+    Models: {},
+    Views: {},
+    Controllers: {},
+    Featuers: {},
+    Helpers: {},
+}
 
 
 /**
@@ -19,7 +23,7 @@ App.features = App.features || {};
  * assets based on certain conditions - in our case, mobile/touch.
  *
  **/
-App.helpers.AssetsLoader = function) {
+App.Helpers.AssetsLoader = function) {
     window.Modernizr.load([
         {
             test: Modernizr.touch,
@@ -54,7 +58,7 @@ App.helpers.AssetsLoader = function) {
 *
 **/
 
-App.features = {
+App.Features = {
     init: function() {
         var features = $('[data-features]');
         if ( !features.length ) return false;
