@@ -12,10 +12,10 @@ module.exports = function(grunt) {
     // configurable paths
     var pathConfig = {
         src: 'src',
-        build: 'htdocs',
+        build: 'app',
         dist: 'dist'
     };
-    
+
     grunt.initConfig({
         base: pathConfig,
         // Grunt Server Tasks
@@ -78,8 +78,8 @@ module.exports = function(grunt) {
         },
 
         // Start Compile Tasks
-        compass: {                  
-            dev: {                    
+        compass: {
+            dev: {
                 options: {
                         // Only change if you are adjusting the directories within the src folder
                         sassDir: '<%= base.src %>/sass',
@@ -98,7 +98,7 @@ module.exports = function(grunt) {
                     bare: true
                 },
                 files: {
-                    // List out any Coffeescript files that need to be compiled 
+                    // List out any Coffeescript files that need to be compiled
                     // in the following pattern
                     '<%= base.build %>/js/main.js' : '<%= base.src %>/coffee/main.coffee'
                 }
@@ -134,12 +134,12 @@ module.exports = function(grunt) {
                 ]
             }
         },
-        
+
         copy: {
             dev: {
                 files: [
                     // List any files that need to be copied in the following pattern
-                    // ie. files that are managed with Bower but need to be moved to the 
+                    // ie. files that are managed with Bower but need to be moved to the
                     // htdocs directory
                     {
                         src: '<%= base.src %>/packages/bootstrap/dist/css/bootstrap.css',
@@ -161,7 +161,7 @@ module.exports = function(grunt) {
                     collapseWhitespace: true
                 },
                 files: {
-                    // Must list all HTML files that need to be minified in 
+                    // Must list all HTML files that need to be minified in
                     // the following pattern
                     '<%= base.dist %>/index.html': '<%= base.build %>/index.html'
                 }
@@ -224,7 +224,7 @@ module.exports = function(grunt) {
 
     //Grunt Tasks
     grunt.registerTask('default', ['dev', 'server']);
-    
+
     grunt.registerTask('server', ['connect:livereload', 'open', 'watch']);
     grunt.registerTask('compile', ['compass', 'coffee']);
     grunt.registerTask('dev', ['concat', 'copy:dev']);
