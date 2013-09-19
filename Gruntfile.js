@@ -126,6 +126,7 @@ module.exports = function(grunt) {
                     {
                         src: [
                             '<%= base.src %>/javascript/main.js',
+                            '<%= base.src %>/javascript/functions.js',
                             '<%= base.src %>/javascript/modules/sample-module.js',
                             '<%= base.src %>/javascript/init.js'
                         ],
