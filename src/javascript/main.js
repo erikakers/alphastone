@@ -12,8 +12,10 @@ window.App = {
     Views: {},
     Controllers: {},
     Featuers: {},
+    Functions: {},
     Helpers: {},
 }
+
 
 
 /**
@@ -42,6 +44,7 @@ App.Helpers.AssetsLoader = function) {
         }
     ]);
 };
+
 
 /**
 *
