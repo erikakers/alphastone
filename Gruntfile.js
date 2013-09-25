@@ -174,8 +174,8 @@ module.exports = function(grunt) {
                 files: {
                     // List any CSS files outside of site.css that need to be
                     // combined into one file
-                    '<%= base.dist %>/css/site.css': [
-                        '<%= base.build %>/css/site.css'
+                    '<%= base.dist %>/css/app.css': [
+                        '<%= base.build %>/css/app.css'
                         //,'<%= base.build %>/css/other.css'
                     ],
                     '<%= base.dist %>/css/bootstrap.css': '<%= base.build %>/css/bootstrap.css'
@@ -187,8 +187,8 @@ module.exports = function(grunt) {
             my_target: {
                 files: {
                     // List any Javascript file that need to be minified
-                    '<%= base.dist %>/js/vendor/compiled.js': [
-                        '<%= base.build %>/js/vendor/compiled.js'
+                    '<%= base.dist %>/js/vendor/plugins.js': [
+                        '<%= base.build %>/js/vendor/plugins.js'
                     ],
                     '<%= base.dist %>/js/main.js': [
                         '<%= base.build %>/js/main.js'
