@@ -25,6 +25,7 @@ window.App = {
  * assets based on certain conditions - in our case, mobile/touch.
  *
  **/
+
 App.Helpers.AssetsLoader = function) {
     window.Modernizr.load([
         {
@@ -63,13 +64,17 @@ App.Helpers.AssetsLoader = function) {
 
 App.Features = {
     init: function() {
-        var features = $('[data-features]');
-        if ( !features.length ) return false;
-        for ( var i = 0; i < features.length; i++ ) {
-            var func = $(features[i]).data('features');
-            if ( this[func] && typeof this[func].init === 'function' ) {
-                this[func].init();
+        var features = $('[data-features]').data('features');
+        if(features) {
+            featuresArray = features.split(' ');
+            for(var i = 0, length = featuresArray.length; i < length; i++) {
+                var func = featuresArray[i];
+                if(this[func] && typeof this[func].init === 'function') {
+                    this[func].init();
+                }
             }
         }
     }
 };
+
+

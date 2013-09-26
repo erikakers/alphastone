@@ -7,7 +7,5 @@ App.init = function() {
 
 // Kick it all off on DOM Ready
 $(function(){
-    $(document).ready(function(){
-        App.init();
-    });
+	App.init();
 });
