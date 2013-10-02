@@ -4,6 +4,6 @@
   "dependencies": {
     "jquery": "1.10.2",
     "bootstrap": "latest",
-    "lo-dash": "latest"
+    "lodash": "latest"
   }
 }
