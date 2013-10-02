@@ -116,6 +116,7 @@ module.exports = function(grunt) {
                         src: [
                             '<%= base.src %>/packages/jquery/jquery.js',
                             '<%= base.src %>/packages/bootstrap/dist/js/bootstrap.js',
+                            '<%= base.src %>/packages/lodash/dist/lodash.js'
                         ],
                         dest: '<%= base.build %>/js/vendor/plugins.js'
                     }
