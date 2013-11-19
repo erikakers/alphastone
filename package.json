@@ -7,7 +7,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "grunt": "latest",
+    "grunt": "~0.4.1",
     "matchdep": "~0.1.1",
     "grunt-contrib-coffee": "latest",
     "grunt-contrib-compass": "latest",
@@ -23,7 +23,8 @@
     "grunt-contrib-cssmin": "~0.6.0",
     "grunt-contrib-uglify": "~0.2.0",
     "grunt-react": "latest",
-    "grunt-contrib-clean": "~0.5.0"
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-uncss": "~0.1.5"
   },
   "engines": {
     "node": ">=0.8.0"
