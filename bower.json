@@ -1,9 +1,24 @@
 {
   "name": "Alphastone",
-  "version": "1.0.0",
-  "dependencies": {
-    "jquery": "1.10.2",
-    "bootstrap": "latest",
-    "lodash": "latest"
+  "version": "0.4.0",
+  "homepage": "https://github.com/erikakers/alphastone",
+  "authors": [
+    "Erik Akers <erikakers@gmail.com>"
+  ],
+  "description": "Alphastone is a Yeoman spin of that lets Front-End Developers build and hand code off to App Developers faster and in an apected format.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/packages",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.0.2",
+    "backbone": "~1.1.0",
+    "lodash": "~2.3.0",
+    "react": "~0.5.1"
   }
 }
