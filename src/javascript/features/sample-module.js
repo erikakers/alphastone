@@ -9,7 +9,7 @@ App.features.menuItems = (function(menuItems){
 
         someFunctions = function() {
             // Make something happen I mean that's the point of all of this
-        };  // The Last funciton before the init function has to end with a 
+        };  // The Last funciton before the init function has to end with a
             // semi-colon otherwise the init function will cause an error
 
     menuItems.init = function() {
