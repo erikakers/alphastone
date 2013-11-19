@@ -6,7 +6,6 @@
     "Erik Akers <erikakers@gmail.com>"
   ],
   "description": "Alphastone is Yeoman spin-off, that stream lines Front End Development work but creates files and a folder structure that can be handed off to Back End Developers effortlessly.",
-  "dependencies": {},
   "devDependencies": {
     "grunt": "~0.4.1",
     "matchdep": "~0.1.1",
