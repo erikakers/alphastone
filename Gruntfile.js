@@ -30,7 +30,7 @@ module.exports = function(grunt) {
             },
             javascript: {
                 files: ['<%= base.src %>/javascript/{,*/}*.js'],
-                tasks: 'concat:dev'
+                tasks: ['concat:dev', 'react']
             },
             livereload: {
                 options: {
@@ -105,6 +105,17 @@ module.exports = function(grunt) {
             }
         },
 
+        react: {
+            app: {
+                options: {
+                    extension: 'js'
+                },
+                files: {
+                    '<%= base.src %>/javascript/views': '<%= base.src %>/javascript/jsx'
+                }
+            }
+        },
+
         // Start Dev Tasks
         concat: {
             vendor: {
@@ -116,7 +127,9 @@ module.exports = function(grunt) {
                         src: [
                             '<%= base.src %>/packages/jquery/jquery.js',
                             '<%= base.src %>/packages/bootstrap/dist/js/bootstrap.js',
-                            '<%= base.src %>/packages/lodash/dist/lodash.js'
+                            '<%= base.src %>/packages/lodash/dist/lodash.js',
+                            '<%= base.src %>/packages/backbone/backbone.js',
+                            '<%= base.src %>/packages/react/react.js'
                         ],
                         dest: '<%= base.build %>/js/vendor/plugins.js'
                     }
@@ -126,9 +139,15 @@ module.exports = function(grunt) {
                 files: [
                     {
                         src: [
-                            '<%= base.src %>/javascript/main.js',
+                            '<%= base.src %>/javascript/namespace.js',
+                            '<%= base.src %>/javascript/assetsLoader.js',
+                            '<%= base.src %>/javascript/features.js',
                             '<%= base.src %>/javascript/functions.js',
-                            '<%= base.src %>/javascript/modules/{,*/}*.js',
+                            '<%= base.src %>/javascript/helpers/{,*/}*.js',
+                            '<%= base.src %>/javascript/features/{,*/}*.js',
+                            '<%= base.src %>/javascript/models/{,*/}*.js',
+                            '<%= base.src %>/javascript/controllers/{,*/}*.js',
+                            '<%= base.src %>/javascript/views/{,*/}*.js',
                             '<%= base.src %>/javascript/init.js'
                         ],
                         dest: '<%= base.build %>/js/main.js'
@@ -156,6 +175,13 @@ module.exports = function(grunt) {
         },
 
         // Start Build Tasks
+
+        clean: {
+            build: {
+                src: ["<%= base.dist %>"]
+            }
+        },
+
         htmlmin: {
             dist: {
                 options: {
@@ -176,7 +202,7 @@ module.exports = function(grunt) {
                     // List any CSS files outside of site.css that need to be
                     // combined into one file
                     '<%= base.dist %>/css/app.css': [
-                        '<%= base.build %>/css/app.css'
+                        '<%= base.build %>/css/app.min.css'
                         //,'<%= base.build %>/css/other.css'
                     ],
                     '<%= base.dist %>/css/bootstrap.css': '<%= base.build %>/css/bootstrap.css'
@@ -189,10 +215,10 @@ module.exports = function(grunt) {
                 files: {
                     // List any Javascript file that need to be minified
                     '<%= base.dist %>/js/vendor/plugins.js': [
-                        '<%= base.build %>/js/vendor/plugins.js'
+                        '<%= base.build %>/js/vendor/plugins.min.js'
                     ],
                     '<%= base.dist %>/js/main.js': [
-                        '<%= base.build %>/js/main.js'
+                        '<%= base.build %>/js/main.min.js'
                         //,'<%= base.build/js/other.js'
                     ],
                     '<%= base.dist %>/js/vendor/modernizr.js': '<%= base.build %>/js/vendor/modernizr.js'
@@ -226,9 +252,8 @@ module.exports = function(grunt) {
 
     //Grunt Tasks
     grunt.registerTask('default', ['dev', 'server']);
-
     grunt.registerTask('server', ['connect:livereload', 'open', 'watch']);
-    grunt.registerTask('compile', ['compass', 'coffee']);
+    grunt.registerTask('compile', ['compass', 'coffee', 'react']);
     grunt.registerTask('dev', ['concat', 'copy:dev']);
-    grunt.registerTask('build', ['htmlmin', 'uglify', 'cssmin', 'imagemin', 'svgmin']);
+    grunt.registerTask('build', ['clean', 'htmlmin', 'uglify', 'cssmin', 'imagemin', 'svgmin']);
 };
