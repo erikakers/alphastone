@@ -2,14 +2,14 @@
  * @jsx React.DOM
  */
 
-var MyComponent = React.createClass({
+var App.Views.MyComponent = React.createClass({
 
 	render: function() {
 		return (
-			<p>Howdy World</p>
+			<p>Awesome Code</p>
 		);
 	}
 
 });
 
-React.renderComponent( <MyComponent />, document.getElementById('content'));
+React.renderComponent( <MyComponent />, document.getElementById('container'));
