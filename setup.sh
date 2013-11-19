@@ -1,4 +1,3 @@
-sudo gem install compass
-sudo npm install
+npm install
 bower install
 grunt
