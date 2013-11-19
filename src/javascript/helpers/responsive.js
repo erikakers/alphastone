@@ -4,8 +4,6 @@
 // App.Helpers.responsiveConditions function.
 // This requires Lo-Dash or Underscore to work.
 
-// THIS IS NOT INCLUDED IN THE GRUNTFILE BY DEFAULT
-
 App.Helpers.resizeThrottle = (function(throttle) {
 
     var plug = function() {
