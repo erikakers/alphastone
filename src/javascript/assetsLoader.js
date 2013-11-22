@@ -7,7 +7,7 @@
  **/
 
 App.Helpers.AssetsLoader = function() {
-    window.Modernizr.load([
+    window.yepnope([
         {
             test: Modernizr.touch,
             yep: 'script/touch.js',
