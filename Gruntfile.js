@@ -126,12 +126,19 @@ module.exports = function(grunt) {
                     {
                         src: [
                             '<%= base.src %>/packages/jquery/jquery.js',
-                            '<%= base.src %>/packages/bootstrap/dist/js/bootstrap.js',
+                            '<%= base.src %>/packages/foundation/js/foundation.js',
                             '<%= base.src %>/packages/lodash/dist/lodash.js',
                             '<%= base.src %>/packages/backbone/backbone.js',
                             '<%= base.src %>/packages/react/react.js'
                         ],
                         dest: '<%= base.build %>/js/vendor/plugins.js'
+                    },
+                    {
+                        src: [
+                            '<%= base.src %>/packages/modernizr/modernizr.js',
+                            '<%= base.src %>/packages/yepnope/yepnope.js'
+                        ],
+                        dest: '<%= base.build %>/js/vendor/header.js'
                     }
                 ]
             },
@@ -163,12 +170,12 @@ module.exports = function(grunt) {
                     // ie. files that are managed with Bower but need to be moved to the
                     // htdocs directory
                     {
-                        src: '<%= base.src %>/packages/bootstrap/dist/css/bootstrap.css',
-                        dest: '<%= base.build %>/css/bootstrap.css'
+                        src: '<%= base.src %>/packages/foundation/css/foundation.css',
+                        dest: '<%= base.build %>/css/foundation.css'
                     },
                     {
-                        src: '<%= base.src %>/javascript/vendor/modernizr.js',
-                        dest: '<%= base.build %>/js/vendor/modernizr.js'
+                        src: '<%= base.src %>/packages/foundation/css/normalize.css',
+                        dest: '<%= base.build %>/css/normalize.css'
                     }
                 ]
             }
@@ -223,6 +230,9 @@ module.exports = function(grunt) {
                     // List any Javascript file that need to be minified
                     '<%= base.dist %>/js/vendor/plugins.min.js': [
                         '<%= base.build %>/js/vendor/plugins.js'
+                    ],
+                    '<%= base.dist %>/js/vender/header.min.js': [
+                        '<%= base.build %>js/vendor/header.js'
                     ],
                     '<%= base.dist %>/js/main.min.js': [
                         '<%= base.build %>/js/main.js'
