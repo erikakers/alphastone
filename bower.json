@@ -16,7 +16,7 @@
     "tests"
   ],
   "devDependencies": {
-    "bootstrap": "~3.0.2",
+    "foundation": "zurb/bower-foundation#~5.0.0",
     "backbone": "~1.1.0",
     "lodash": "~2.3.0",
     "react": "~0.5.1"
