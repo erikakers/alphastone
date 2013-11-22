@@ -191,7 +191,7 @@ module.exports = function(grunt) {
         uncss: {
             dist: {
                 files: {
-                    '<%= base.dist %>/css/tidy.css': [
+                    '<%= base.build %>/css/tidy.css': [
                         'app/{,*/}*.html'
                     ]
                 }
@@ -218,7 +218,7 @@ module.exports = function(grunt) {
                     // List any CSS files outside of site.css that need to be
                     // combined into one file
                     '<%= base.dist %>/css/app.min.css': [
-                        '<%= base.dist %>/css/tidy.css'
+                        '<%= base.build %>/css/tidy.css'
                     ]
                 }
             }
@@ -263,7 +263,6 @@ module.exports = function(grunt) {
                 }]
             }
         }
-
     });
 
     //Grunt Tasks
