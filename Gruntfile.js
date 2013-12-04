@@ -126,7 +126,7 @@ module.exports = function(grunt) {
                     {
                         src: [
                             '<%= base.src %>/packages/jquery/jquery.js',
-                            '<%= base.src %>/packages/foundation/js/foundation.js',
+                            '<%= base.src %>/packages/bootstrap/dist/js/bootstrap.js',
                             '<%= base.src %>/packages/lodash/dist/lodash.js',
                             '<%= base.src %>/packages/backbone/backbone.js',
                             '<%= base.src %>/packages/react/react.js'
@@ -164,18 +164,42 @@ module.exports = function(grunt) {
         },
 
         copy: {
+            setup: {
+                files: [
+                    {
+                        src: '<%= base.src %>/packages/html5-boilerplate/robots.txt',
+                        dest: '<%=  base.build %>/robots.txt'
+                    },
+                    {
+                        src: '<%= base.src %>/packages/html5-boilerplate/.htaccess',
+                        dest: '<%= base.build %>/.htaccess'
+                    }
+                ]
+            },
             dev: {
                 files: [
                     // List any files that need to be copied in the following pattern
                     // ie. files that are managed with Bower but need to be moved to the
                     // htdocs directory
                     {
-                        src: '<%= base.src %>/packages/foundation/css/foundation.css',
-                        dest: '<%= base.build %>/css/foundation.css'
+                        src: '<%= base.src %>/packages/bootstrap/dist/css/bootstrap.css',
+                        dest: '<%= base.build %>/css/bootstrap.css'
                     },
                     {
                         src: '<%= base.src %>/packages/foundation/css/normalize.css',
                         dest: '<%= base.build %>/css/normalize.css'
+                    }
+                ]
+            },
+            dist: {
+                files: [
+                    {
+                        src: '<%= base.build %>/.htaccess',
+                        dest: '<%= base.dist %>/.htaccess'
+                    },
+                    {
+                        src: '<%= base.build %>/robots.txt',
+                        dest: '<%= base.dist %>/robots.txt'
                     }
                 ]
             }
@@ -192,7 +216,7 @@ module.exports = function(grunt) {
             dist: {
                 files: {
                     '<%= base.build %>/css/tidy.css': [
-                        'app/{,*/}*.html'
+                        '<%= base.build %>/{,*/}*.html'
                     ]
                 }
             }
@@ -203,13 +227,13 @@ module.exports = function(grunt) {
                 options: {
                     removeComments: true,
                     collapseWhitespace: true
-                },
-                files: {
-                    // Must list all HTML files that need to be minified in
-                    // the following pattern
-                    '<%= base.dist %>/index.html': '<%= base.build %>/index.html'
-                }
-            }
+            },
+            files:[{
+                    expand: true,
+                    cwd: '<%= base.build %>',
+                    src: '*.html',
+                    dest: '<%= base.dist %>'
+            }]
         },
 
         cssmin: {
@@ -217,7 +241,7 @@ module.exports = function(grunt) {
                 files: {
                     // List any CSS files outside of site.css that need to be
                     // combined into one file
-                    '<%= base.dist %>/css/app.min.css': [
+                    '<%= base.dist %>/css/app.css': [
                         '<%= base.build %>/css/tidy.css'
                     ]
                 }
@@ -228,16 +252,15 @@ module.exports = function(grunt) {
             my_target: {
                 files: {
                     // List any Javascript file that need to be minified
-                    '<%= base.dist %>/js/vendor/plugins.min.js': [
+                    '<%= base.dist %>/js/vendor/plugins.js': [
                         '<%= base.build %>/js/vendor/plugins.js'
                     ],
-                    '<%= base.dist %>/js/vender/header.min.js': [
+                    '<%= base.dist %>/js/vender/header.js': [
                         '<%= base.build %>js/vendor/header.js'
                     ],
-                    '<%= base.dist %>/js/main.min.js': [
+                    '<%= base.dist %>/js/main.js': [
                         '<%= base.build %>/js/main.js'
-                    ],
-                    '<%= base.dist %>/js/vendor/modernizr.min.js': '<%= base.build %>/js/vendor/modernizr.js'
+                    ]
                 }
             }
         },
@@ -267,8 +290,9 @@ module.exports = function(grunt) {
 
     //Grunt Tasks
     grunt.registerTask('default', ['dev', 'server']);
+    grunt.registerTask('setup', ['copy:setup', 'dev']);
+    grunt.registerTask('dev', ['concat:vendor', 'concat:dev', 'copy:dev']);
     grunt.registerTask('server', ['connect:livereload', 'open', 'watch']);
     grunt.registerTask('compile', ['compass', 'coffee', 'react']);
-    grunt.registerTask('dev', ['concat:vendor', 'concat:dev', 'copy:dev']);
-    grunt.registerTask('build', ['clean', 'uncss', 'htmlmin', 'uglify', 'cssmin', 'imagemin', 'svgmin']);
+    grunt.registerTask('build', ['clean', 'uncss', 'htmlmin', 'uglify', 'cssmin', 'imagemin', 'svgmin', 'copy:dist']);
 };
