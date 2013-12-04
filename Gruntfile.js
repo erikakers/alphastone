@@ -85,9 +85,10 @@ module.exports = function(grunt) {
                         sassDir: '<%= base.src %>/sass',
                         cssDir: '<%= base.build %>/css',
                         environment: 'development',
+                        fontsDir: '<%= base.build %>/css/fonts',
+                        importPath: '<%= base.src %>/packages',
                         imagesDir: '<%= base.build %>/images',
-                        javascriptsDir: '<%= base.build %>/js',
-                        fontsDir: '<%= base.build %>/fonts'
+                        javascriptsDir: '<%= base.build %>/js'
                 }
             }
         },
@@ -208,7 +209,9 @@ module.exports = function(grunt) {
         // Start Build Tasks
         clean: {
             build: {
-                src: ["<%= base.dist %>"]
+                src: [
+                    "<%= base.dist %>"
+                ]
             }
         },
 
@@ -227,20 +230,19 @@ module.exports = function(grunt) {
                 options: {
                     removeComments: true,
                     collapseWhitespace: true
-            },
-            files:[{
+                },
+                files: [{
                     expand: true,
                     cwd: '<%= base.build %>',
                     src: '*.html',
                     dest: '<%= base.dist %>'
-            }]
+                }]
+            }
         },
 
         cssmin: {
             dist: {
                 files: {
-                    // List any CSS files outside of site.css that need to be
-                    // combined into one file
                     '<%= base.dist %>/css/app.css': [
                         '<%= base.build %>/css/tidy.css'
                     ]
@@ -290,7 +292,7 @@ module.exports = function(grunt) {
 
     //Grunt Tasks
     grunt.registerTask('default', ['dev', 'server']);
-    grunt.registerTask('setup', ['copy:setup', 'dev']);
+    grunt.registerTask('setup', ['copy:setup', 'dev', 'server']);
     grunt.registerTask('dev', ['concat:vendor', 'concat:dev', 'copy:dev']);
     grunt.registerTask('server', ['connect:livereload', 'open', 'watch']);
     grunt.registerTask('compile', ['compass', 'coffee', 'react']);
