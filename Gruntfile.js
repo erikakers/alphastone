@@ -32,6 +32,10 @@ module.exports = function(grunt) {
                 files: ['<%= base.src %>/javascript/{,*/}*.js'],
                 tasks: ['concat:dev', 'react']
             },
+            react: {
+                files: ['<%= base.src %>/javascript/jsx/{,*/}*.jsx'],
+                tasks: ['react']
+            },
             livereload: {
                 options: {
                     livereload: LIVERELOAD_PORT
@@ -107,13 +111,16 @@ module.exports = function(grunt) {
         },
 
         react: {
-            app: {
-                options: {
-                    extension: 'js'
-                },
-                files: {
-                    '<%= base.src %>/javascript/views': '<%= base.src %>/javascript/jsx'
-                }
+            compile: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= base.src %>/javascript/jsx',
+                        src: ['**/*.jsx'],
+                        dest: '<%= base.src %>/javascript/views',
+                        ext: '.js'
+                    }
+                ]
             }
         },
 
