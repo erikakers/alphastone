@@ -105,6 +105,7 @@ module.exports = function(grunt) {
                 files: {
                     // List out any Coffeescript files that need to be compiled
                     // in the following pattern
+                    // TODO : This task really needs some love.
                     '<%= base.build %>/js/main.js' : '<%= base.src %>/coffee/main.coffee'
                 }
             }
@@ -192,10 +193,6 @@ module.exports = function(grunt) {
                     {
                         src: '<%= base.src %>/packages/bootstrap/dist/css/bootstrap.css',
                         dest: '<%= base.build %>/css/bootstrap.css'
-                    },
-                    {
-                        src: '<%= base.src %>/packages/foundation/css/normalize.css',
-                        dest: '<%= base.build %>/css/normalize.css'
                     }
                 ]
             },
