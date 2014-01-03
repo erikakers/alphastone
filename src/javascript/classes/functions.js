@@ -1,5 +1,4 @@
-// This is setting up an OOP like structure for repeating functions.
-
+// This is setting up an OOP-ish like structure for repeating functions.
 
 App.Functions = {
 	method: function() {
