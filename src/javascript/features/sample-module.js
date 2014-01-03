@@ -1,22 +1,21 @@
-
-App.features.menuItems = (function(menuItems){
+App.Features.customFeature = (function(feature){
     var els = {},
 
         setEls = function() {
-            // Set Elements for the function here
-            // Cache all selectors as variables els.menu = $('.menu');
+            /* Cache any selectors that are needed */
+            /* els.element = $('.element') if using jQuery*/
         },
 
-        someFunctions = function() {
-            // Make something happen I mean that's the point of all of this
-        };  // The Last funciton before the init function has to end with a
-            // semi-colon otherwise the init function will cause an error
+        method = function() {
+            /* Method/function to make magic happen. Add as many of this as need
+            *  and keep the funtions short and reused able.
+            */
+        };
 
-    menuItems.init = function() {
+    feature.init = function() {
+        /* Call functions to fire when the feature on init. */
         setEls();
-        someFunctions(); // Make whatever do the thing
     }
 
-    return menuItems;
-
-}(App.features.menuItems || {}))
+    return feature;
+}(App.Features.customFeature || {}));
