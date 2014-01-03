@@ -12,6 +12,5 @@ window.App = {
     Views: {},
     Controllers: {},
     Featuers: {},
-    Functions: {},
     Helpers: {},
 }
