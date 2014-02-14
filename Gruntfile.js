@@ -191,8 +191,8 @@ module.exports = function(grunt) {
                     // ie. files that are managed with Bower but need to be moved to the
                     // htdocs directory
                     {
-                        src: '<%= base.src %>/packages/bootstrap/dist/css/bootstrap.css',
-                        dest: '<%= base.build %>/css/bootstrap.css'
+                       // src: '<%= base.src %>/packages/bootstrap/dist/css/bootstrap.css',
+                        //dest: '<%= base.build %>/css/bootstrap.css'
                     }
                 ]
             },
