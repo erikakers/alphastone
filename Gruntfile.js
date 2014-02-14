@@ -90,7 +90,7 @@ module.exports = function(grunt) {
                         cssDir: '<%= base.build %>/css',
                         environment: 'development',
                         fontsDir: '<%= base.build %>/css/fonts',
-                        importPath: '<%= base.src %>/packages',
+                        importPath: '<%= base.src %>/packages/foundation/scss',
                         imagesDir: '<%= base.build %>/images',
                         javascriptsDir: '<%= base.build %>/js'
                 }
