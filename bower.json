@@ -16,7 +16,7 @@
   ],
   "devDependencies": {
     "html5-boilerplate": "~4.3.0",
-    "bootstrap": "~3.0.2",
+    //"bootstrap": "~3.0.2",
     "backbone": "~1.1.0",
     "lodash": "~2.3.0",
     "react": "~0.5.1",
