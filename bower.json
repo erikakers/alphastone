@@ -13,5 +13,13 @@
     "src/packages",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "html5-boilerplate": "~4.3.0",
+    "foundation": "~5.2.3",
+    "lodash": "~2.4.1",
+    "jquery-tiny-pubsub": "~0.7.0",
+    "bourbon": "~4.0.2",
+    "velocity": "~0.0.20"
+  }
 }
