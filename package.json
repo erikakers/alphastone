@@ -1,10 +1,9 @@
 {
-  "name": "GruntProject",
-  "version": "0.1.0",
-  "description": "Just trying to make my grunt organization a little cleaner.",
+  "name": "Alphastone",
+  "version": "0.6.0",
   "repository": {
     "type": "git",
-    "url": "https://erikakers@github.com/erikakers/grunt.git"
+    "url": "https://erikakers@github.com/erikakers/alphastone.git"
   },
   "keywords": [
     "Grunt",
@@ -13,9 +12,9 @@
   "author": "Erik Akers",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/erikakers/grunt/issues"
+    "url": "https://github.com/erikakers/alphastone/issues"
   },
-  "homepage": "https://github.com/erikakers/grunt",
+  "homepage": "https://github.com/erikakers/alphastone",
   "devDependencies": {
     "grunt": "^0.4.2",
     "time-grunt": "^0.3.1",
