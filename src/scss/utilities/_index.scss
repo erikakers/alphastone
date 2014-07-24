@@ -1,0 +1,14 @@
+// Global Project Utilities are referenced in this file. Project mixins, placeholders,
+// functions and helpers should be included into this file.
+// This file is imported into the main app.scss file. 
+
+// =============================================================================
+// Project Mixins
+// =============================================================================
+@import "mixins/index";
+
+
+// =============================================================================
+// Responsive Breakpoints
+// =============================================================================
+@import "breakpoints";
