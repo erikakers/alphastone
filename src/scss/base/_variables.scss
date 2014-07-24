@@ -1,1 +1,8 @@
-// Project Variables
+// This file holds all of the variables for the project and is designed to give
+// one central place to update and modify site wide variables. This file is
+// imported into base/index.
+
+
+// This is used for element debuging
+// TODO: add debuging styling file to utilities folder
+$debug: false;
