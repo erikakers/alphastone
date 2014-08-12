@@ -13,7 +13,7 @@ module.exports = {
 	},
 	javascript: {
 		files: ['<%= config.src %>/javascript/{,*/}*.js'],
-		tasks: ['newer:concat:dev', 'newer:jshint', 'react']
+		tasks: ['newer:concat:dev', 'autopolyfiller', 'newer:jshint', 'react']
 	},
 	react: {
 		files: ['<%= config.src %>/javascript/jsx/{,*/}*.jsx'],
