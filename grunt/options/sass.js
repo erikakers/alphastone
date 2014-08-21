@@ -1,11 +1,10 @@
 module.exports = {
 	dev: {
 		options: {
-			sourcemap: true,
 			loadPath: [
 				// Samples for adding other SCSS libraries
 				'<%= config.vendor %>/foundation/scss/',
-				'<%= config.vendor %>/bourbon/app/assets/stylesheets'
+				'<%= config.vendor %>/bourbon/dist/'
 			]
 		},
 		files: [{
