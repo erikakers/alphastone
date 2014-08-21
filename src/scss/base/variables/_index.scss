@@ -1,0 +1,14 @@
+// This folder/file is for variables. Sometimes a 300 line variable file is a lot to
+// manage so this structure provides the option to break variables into smaller
+// more managable partials or just include all varibles in this single file.
+//
+// An example would be breaking variables up by category ie. colors or typography.
+// This file imports into base/index.
+
+// This is used for element debuging
+// TODO: add debuging styling file to utilities folder
+$debug: false;
+
+// Typography Variables
+$base-font-size: 16px;
+$base-line-height: 24px;
