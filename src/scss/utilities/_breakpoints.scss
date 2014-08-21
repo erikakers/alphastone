@@ -1,54 +1,23 @@
-// These are mobile first media queries, start with your styling on mobile and
-// then adjust for larger sizes.
+// Using Breakpoint map that is defined in the variables folder. This will create
+// new breakpoint based off the values within that map, there should be no need
+// to edit this mixin code.
+ 
+@mixin breakpoint($breakpoint) {
+	$value: map-get($breakpoints, $breakpoint);
 
-$tiny:          	320px;
-$mobile: 					480px;
-$tablet: 					768px;
-$desktop: 				992px;
-$desktop-large: 	1200px;
+	@if $value != null {
+		@media (min-width: $value) {
+			@content;
+		}
+	}
 
-@mixin tiny {
-	@media only screen and (min-width : $tiny) and (max-width : $mobile) {
-		@content;
+	@else {
+		@warn "'#{$breakpoint}' is not defined in the $breakpoints map.";
 	}
 }
 
-// Extra Small Devices, Phones
-@mixin mobile {
-	@media only screen and (min-width : $mobile) {
-		@content;
-	}
-}
 
-// Mobile Only breakpoint
-@mixin mobile-only {
-	@media only screen and (max-width : $tablet - 1) {
-		@content;
-	}
-}
-
-// Small Devices, Tablets
-@mixin tablet {
-	@media only screen and (min-width : $tablet) {
-		@content;
-	}
-}
-
-// Medium Devices, Desktops
-@mixin desktop {
-	@media only screen and (min-width : $desktop) {
-		@content;
-	}
-}
-
-// Large Devices, Wide Screens
-@mixin desktop-large {
-	@media only screen and (min-width : $desktop-large) {
-		@content;
-	}
-}
-
-// Retina screens have a 1.5 pixel ratio, not 2
+// Retina mixin in for high pixel ratio displays
 @mixin retina {
 	@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
 		@content;
