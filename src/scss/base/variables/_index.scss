@@ -6,9 +6,19 @@
 // This file imports into base/index.
 
 // This is used for element debuging
-// TODO: add debuging styling file to utilities folder
 $debug: false;
+
+// Map imports
+@import "breakpoint-map";
 
 // Typography Variables
 $base-font-size: 16px;
 $base-line-height: 24px;
+
+// Sample Color Map
+$colors: (
+  navy: #000080,
+  green: #008000,
+  teal: #008080,
+  aqua: #00ffff
+);
