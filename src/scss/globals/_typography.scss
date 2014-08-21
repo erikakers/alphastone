@@ -3,5 +3,18 @@
 
 // Sample style
 h1 {
-  font-size: 36px;
+  font-size: 30px;
+  // Sample for how to use the breakpoint mixins
+  @include breakpoint(small) {
+    font-size: 36px;
+  }
+}
+
+
+// Sample Modifier loop for outputting font color modifiers with a SASS map.
+// The map is located in variables/index file.
+@each $color, $textcolor in $colors {
+  .font--#{$color} {
+    color: $textcolor;
+  }
 }
