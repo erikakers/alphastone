@@ -9,7 +9,7 @@ module.exports = {
 	},
 	sass: {
 		files: ['<%= config.src %>/scss/{,*/}*.{scss,sass}'],
-		tasks: ['sass:dev', 'autoprefixer']
+		tasks: ['sass', 'autoprefixer']
 	},
 	javascript: {
 		files: ['<%= config.src %>/javascript/{,*/}*.js'],
