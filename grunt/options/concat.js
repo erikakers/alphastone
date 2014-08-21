@@ -2,7 +2,7 @@ module.exports = {
 	options: {
 		banner: '<%= banner %>'
 	},
-	loader {
+	loader: {
 		src: [
 			'<%= config.src %>/javascript/loader/**/*.js'
 		],
