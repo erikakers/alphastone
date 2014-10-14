@@ -4,7 +4,7 @@
 module.exports = function(grunt) {
 
 	require('time-grunt')(grunt);
-	require('load-grunt-tasks')(grunt);
+	require('jit-grunt')(grunt)
 	grunt.template.addDelimiters('custom', '{%', '%}');
 
 	function loadConfig(path) {
