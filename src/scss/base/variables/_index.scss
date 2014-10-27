@@ -9,16 +9,8 @@
 $debug: false;
 
 // Map imports
-@import "breakpoint-map";
+@import "map/breakpoints";
 
-// Typography Variables
-$base-font-size: 16px;
-$base-line-height: 24px;
-
-// Sample Color Map
-$colors: (
-  navy: #000080,
-  green: #008000,
-  teal: #008080,
-  aqua: #00ffff
-);
+// Variable File imports
+@import "colors";
+@import "typography";

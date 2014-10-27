@@ -1,0 +1,37 @@
+// All typography variables are stored in this file maps included.
+// Any colors for typography are defines in the colors variables file
+// this file is only for type and sizing.
+
+// Typography Variables
+$base-font-size: 16px;
+$max-font-size: 40px;
+$base-line-height: 24px;
+$headings: 1;
+
+// Site Font Map
+// Define Project Font-Familys here.
+$font-family: (
+  meta: "ff-meta-web-pro",
+  tisa: "ff-tisa-web-pro",
+  source-code: "source-code-pro"
+);
+
+// Site Font Variables
+// Define variables form the font-family map. 
+$font-headlines: map-get($font-family, meta), 'sans-serif';
+$font-body: map-get($font-family, tisa), 'serif';
+$font-code: map-get($font-family, source-code), 'monospace';
+
+// Font Weight Map
+// Add any other weights that may be needed.
+$weights: (
+  normal: 400,
+  bold: 700
+);
+
+// Text transform Map
+$transform: (
+  uppercase: uppercase,
+  lowercase: lowercase,
+  capitalize: capitalize
+);

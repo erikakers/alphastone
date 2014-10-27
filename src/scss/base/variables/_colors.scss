@@ -1,0 +1,24 @@
+// Project Color Map
+// This is used to create font modifier classes to get around setting colors
+// on specific elements or styles.
+$colors: (
+  white: #fff,
+  black: #000,
+);
+
+// Primary Site colors
+$color-primary: map-get($colors, white);
+$color-secondary: map-get($colors, black);
+
+// Helper Colors
+$color-white: map-get($colors, white);
+$color-black: map-get($colors, black);
+
+// Text Colors
+$text-color: lighten($color-black, 10%);
+$text-quiet: lighten($color-black, 30%);
+$text-loud: $color-black;
+
+// Link Colors
+$link-color: $color-secondary;
+$link-hover-color: darken($color-secondary, 5%);
