@@ -1,0 +1,17 @@
+// Media Typography Specifi Styling
+.typography {
+  embed, iframe, img, object {
+    display: inline;
+    max-width: 100%;
+  }
+
+  figure {
+    display: block;
+    max-width: 100%;
+  }
+
+  figcaption {
+    font-size: 80%;
+    text-align: left;
+  }
+}

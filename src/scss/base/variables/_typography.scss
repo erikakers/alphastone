@@ -6,7 +6,7 @@
 $base-font-size: 16px;
 $max-font-size: 40px;
 $base-line-height: 24px;
-$headings: 1;
+$max-heading: 7;
 
 // Site Font Map
 // Define Project Font-Familys here.
@@ -17,7 +17,7 @@ $font-family: (
 );
 
 // Site Font Variables
-// Define variables form the font-family map. 
+// Define variables form the font-family map.
 $font-headlines: map-get($font-family, meta), 'sans-serif';
 $font-body: map-get($font-family, tisa), 'serif';
 $font-code: map-get($font-family, source-code), 'monospace';

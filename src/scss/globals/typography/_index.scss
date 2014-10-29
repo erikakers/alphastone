@@ -1,0 +1,18 @@
+// This file is sample for project typography. If the project typography is more
+// complex for one file then it should be broken up for project maintainablitlly.
+// All colors are defined in the colors variable file.
+
+// Compass' Vertical Rhythm init
+@include establish-baseline($base-font-size);
+
+@import "modifers";
+@import "globals";
+
+// Defines all syling for content areas on pages. Typography class is added to
+// any section that is heavy in typographical elements.
+// i.e. Blogs Posts, Content Pages, etc.
+@import "setup";
+@import "block-elements";
+@import "list-elements";
+@import "media-elements";
+@import "inline-elements";

@@ -1,0 +1,23 @@
+// Global Type Styling
+// Loop to creating base heading styling
+@while $iterator < $max-heading {
+  $font-size: $max-font-size - $iterator * 4;
+
+  h#{$iterator}, .h#{$iterator} {
+    @include adjust-font-size-to($font-size);
+    font-family: $font-headlines;
+  }
+
+  $iterator: $iterator + 1;
+}
+
+// Global Link Styling
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+}

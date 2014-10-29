@@ -1,0 +1,49 @@
+// List Typography Specific Styling
+.typograhy {
+  ol, ul {
+    // Creative Styling Goes Here
+  }
+
+  ol ol, ul ul, ol ul, ul ol {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  ol {
+    list-style: decimal;
+  }
+
+  ol ol {
+    list-style: lower-alpha;
+  }
+
+  ol ol ol {
+    list-style: lower-roman;
+  }
+
+  ol ol ol ol {
+    list-style: decimal;
+  }
+
+  ul {
+    list-style: square;
+  }
+
+  li {
+    // Creative Styling Goes Here
+  }
+
+  dl {
+    // Creative Styling Goes Here
+  }
+
+  dt {
+    @extend .font--bold;
+    // Creative Styling Goes Here
+  }
+
+  dd {
+    margin-top: 0;
+    // Creative Styling Goes Here
+  }
+}
