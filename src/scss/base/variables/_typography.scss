@@ -9,18 +9,18 @@ $base-line-height: 24px;
 $max-heading: 7;
 
 // Site Font Map
-// Define Project Font-Familys here.
+// Define Project Web Font Family here. Fall backs are set in the variables.
 $font-family: (
-  meta: "ff-meta-web-pro",
-  tisa: "ff-tisa-web-pro",
-  source-code: "source-code-pro"
+  headlines: "Helvetica Neue",
+  body: "Times New Roman",
+  code: "Courier New"
 );
 
 // Site Font Variables
 // Define variables form the font-family map.
-$font-headlines: map-get($font-family, meta), 'sans-serif';
-$font-body: map-get($font-family, tisa), 'serif';
-$font-code: map-get($font-family, source-code), 'monospace';
+$font-headlines: map-get($font-family, headlines), Helvetica, Arial, sans-serif;
+$font-body: map-get($font-family, body), Georgia, Times, serif;
+$font-code: map-get($font-family, code), Menlo, Monaco, Consolas, monospace;
 
 // Font Weight Map
 // Add any other weights that may be needed.
