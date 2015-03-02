@@ -1,5 +1,6 @@
 module.exports = {
 	server: [
+		'assemble'
 		'sass:dev',
 		'concat:dev',
 	],
