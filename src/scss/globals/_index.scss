@@ -1,0 +1,12 @@
+// This file is for importing global styled elements into the project. This
+// includes styling for links, typography, grids and structure, etc. Elements
+// should be placed in the elements folder.
+
+// This file is imported into the app.scss file.
+
+// =============================================================================
+// Project Typography
+// All Typography styling is the in the Typography sub-directory and broken into
+// small partials. 
+// =============================================================================
+@import "typography/index";

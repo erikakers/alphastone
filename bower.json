@@ -1,26 +1,19 @@
 {
-  "name": "Alphastone",
-  "version": "0.4.0",
+  "name": "alphastone",
+  "version": "0.6.0",
   "homepage": "https://github.com/erikakers/alphastone",
   "authors": [
     "Erik Akers <erikakers@gmail.com>"
   ],
-  "description": "Alphastone is Yeoman spin-off, that stream lines Front End Development work but creates files and a folder structure that can be handed off to Back End Developers effortlessly.",
   "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
+    "bower_components",
     "src/packages",
     "test",
     "tests"
   ],
-  "devDependencies": {
-    "html5-boilerplate": "~4.3.0",
-    "bootstrap": "~3.0.2",
-    "backbone": "~1.1.0",
-    "lodash": "~2.3.0",
-    "react": "~0.5.1",
-    "modernizr": "~2.7.1",
-    "yepnope": "~1.5.4"
+  "dependencies": {
   }
 }

@@ -1,7 +1,8 @@
-
 // Initialize any features that aren't Initialzied through data-features method
 App.init = function() {
-    App.Helpers.AssetsLoader();
+    App.Helpers.getWidth();
+    App.Helpers.resizeThrottle.init();
+    App.Helpers.checkWidthConditions.init();
     App.Features.init();
 };
 

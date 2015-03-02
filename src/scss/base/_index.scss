@@ -1,0 +1,15 @@
+// This is the Project base folder, this folder contains project variables,
+// and other project globals. Any mixin library like Compass or Bourbon should
+// be included here, Bourbon is included by default.
+
+// This file is imported into the app.scss file.
+
+// =============================================================================
+// Project Variables
+// =============================================================================
+@import "variables/index";
+
+// =============================================================================
+// Extra Mixin Library
+// =============================================================================
+@import "bourbon";

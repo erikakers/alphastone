@@ -1,0 +1,53 @@
+// Inline Typography element Styling
+// Anchor Styling is in this section
+.typography {
+
+  a {
+    // Creative Styling here if needed.
+  }
+
+  strong, b {
+    @extend .font--bold;
+  }
+
+  u, em, i {
+    @extend .font--italic;
+  }
+
+  abbr[title] {
+    border-bottom: 1p dotted lighten($color-black, 40%);
+  }
+
+  address {
+    // Creative Styling Here
+  }
+
+  cite {
+    @extend .font--italic;
+  }
+
+  code {
+    font-family: $font-code;
+    @include adjust-font-size-to(14px);
+    padding: .5em;
+  }
+
+  del {
+    color: red; // TODO: should be a variable
+    text-decoration: line-through;;
+  }
+
+  s {
+    text-decoration: line-through;
+  }
+
+  sub {
+    font-size: 80%;
+    vertical-align: sub;
+  }
+
+  sup {
+    font-size: 80%;
+    vertical-align: super;
+  }
+}

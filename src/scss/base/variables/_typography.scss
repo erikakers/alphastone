@@ -1,0 +1,37 @@
+// All typography variables are stored in this file maps included.
+// Any colors for typography are defines in the colors variables file
+// this file is only for type and sizing.
+
+// Typography Variables
+$base-font-size: 16px;
+$max-font-size: 40px;
+$base-line-height: 24px;
+$max-heading: 7;
+
+// Site Font Map
+// Define Project Web Font Family here. Fall backs are set in the variables.
+$font-family: (
+  headlines: "Helvetica Neue",
+  body: "Times New Roman",
+  code: "Courier New"
+);
+
+// Site Font Variables
+// Define variables form the font-family map.
+$font-headlines: map-get($font-family, headlines), Helvetica, Arial, sans-serif;
+$font-body: map-get($font-family, body), Georgia, Times, serif;
+$font-code: map-get($font-family, code), Menlo, Monaco, Consolas, monospace;
+
+// Font Weight Map
+// Add any other weights that may be needed.
+$weights: (
+  normal: 400,
+  bold: 700
+);
+
+// Text transform Map
+$transform: (
+  uppercase: uppercase,
+  lowercase: lowercase,
+  capitalize: capitalize
+);

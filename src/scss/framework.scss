@@ -1,0 +1,10 @@
+// This file imports any framework sytling into the project. Alphastone's
+// default is Foundation, however it can be changed to anything with changing
+// whatever is imported into this file. Make sure that grunt sass.js import path
+// is changed.
+
+// =============================================================================
+// Framework Import
+// =============================================================================
+@import "normalize";
+@import "foundation";

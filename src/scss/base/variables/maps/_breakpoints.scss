@@ -1,0 +1,12 @@
+// This is a breakpoint map that can be customized based on the project. These
+// three breakpoints give the basic guide for reponsiveness. If the project
+// requires different or more breakpoints simply add them to this map in the same
+// format.
+
+$breakpoints: (
+  'small': 320px,
+  'mobile': 480px,
+  'tablet': 768px,
+  'desktop': 992px,
+  'large': 1200px
+);

@@ -1,1 +1,0 @@
-#Alphastone Development Framework

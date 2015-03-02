@@ -1,0 +1,23 @@
+// This folder/file is for variables. Sometimes a 300 line variable file is a lot to
+// manage so this structure provides the option to break variables into smaller
+// more managable partials or just include all varibles in this single file.
+//
+// An example would be breaking variables up by category ie. colors or typography.
+// This file imports into base/index.
+
+// Global Debuging
+// This is used for element debuging
+// Never Commit this file with the debug flag set to true
+$debug: false;
+
+// Global Iterator
+// Used for any loops that needs a count.
+$iterator: 1;
+
+// Map imports
+@import "maps/breakpoints";
+
+// Variable File imports
+@import "colors";
+@import "typography";
+

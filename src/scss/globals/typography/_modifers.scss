@@ -1,0 +1,43 @@
+// Generating Font Modifer Classes
+
+// Color Map Loop to create Modifer Classes
+// Map is located in base/variable/colors
+@each $color, $text-color in $colors {
+  .font--#{$color} {
+    color: $text-color;
+  }
+}
+
+// Font Weight Map Loop to create Modifer Classes
+// Map is located in base/variable/typography
+@each $weight, $font-weight in $weights {
+  .font--#{$weight} {
+    font-weight: $font-weight;
+  }
+}
+
+// Font Transforms Map Loop to create Modifer Classes
+// Map is located in base/variable/typography
+@each $case, $font-transform in $transform {
+  .font--#{$case} {
+    text-transform: $font-transform;
+  }
+}
+
+
+// Typography Helper Classes
+// These are for trying to cut down on extra mark up and giving modifier class
+// to common typography things.
+
+.font--quiet {
+  font-color: $text-quiet;
+}
+
+.font--loud {
+  font-color: $text-loud;
+  @extend .font--bold;
+}
+
+.font--italic {
+  font-style: italic;
+}

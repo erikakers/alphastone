@@ -1,0 +1,21 @@
+// Typography Set up
+.typography {
+  text-rendering: optimizeLegibility;
+
+  caption, dl, dd, div, figcaption, figure, h1, h2, h3, h4, h5, h6, p, pre, table, ol, ul {
+    margin: 1em 0;
+  }
+
+  caption, dl, dd, div, figcaption, figure, p, table, ol, ul, strong, b, u, em, i, abbr[title], address, cite, del, s, sub, sup {
+    font-family: $font-body;
+  }
+
+  blockquote, ol, ul {
+    margin-left: 1em;
+  }
+
+  code, pre {
+    background: #fff; // TODO: Make real color just a placeholder
+    color: $text-color; // TODO: Make something other then default
+  }
+}

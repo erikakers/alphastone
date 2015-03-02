@@ -1,0 +1,24 @@
+// This is the main SCSS file that is compile for the projects CSS. Everything
+// should be imported into this file. Following the default project structure
+// imports should be done within the _index.scss file of sub-directory you're
+// working within.
+
+// =============================================================================
+// Project Base
+// =============================================================================
+@import "base/index";
+
+// =============================================================================
+// Project Utilities
+// =============================================================================
+@import "utilities/index";
+
+// =============================================================================
+// Project Global Styles
+// =============================================================================
+@import "globals/index";
+
+// =============================================================================
+// Project Elements
+// =============================================================================
+@import "elements/index";

@@ -1,0 +1,15 @@
+// This files imports all mixins for the project. Mixins can be defined in the
+// way that best suits your project. It's recommended that each mixin is broken
+// into it's own file or folder structure, then import them with into this file.
+// This file is imported into utilities/index and anything will be automatically
+// imported into your project.
+
+// =============================================================================
+// Breakpoints Mixin
+// =============================================================================
+@import "breakpoints";
+
+// =============================================================================
+// Compass' Vertical Rhythm Mixin
+// =============================================================================
+@import "vertical-rhythm";
