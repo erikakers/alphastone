@@ -10,13 +10,17 @@ module.exports = {
 	},
 	vendor: {
 		src: [
-			'<%= config.vendor %>/jquery/dist/jquery.js'
+			// Any 3rd party libraries should be added here.
+			// If added via bower use <%= config.vendor %> short cut that maps to the
+			// bower created directory
 		],
 		dest: '<%= config.app %>/scripts/vendor/plugins.js'
 	},
 	mobile: {
 		src: [
-			'<%= config.vendor %>/fastclick/lib/fastclick.js'
+			// Any Mobile specific libraries should be added here.
+			// If added via bower use <%= config.vendor %> short cut that maps to the 
+			// bower created directory
 		],
 		dest: '<%= config.app %>/mobile/vendor/mobile.js'
 	},
