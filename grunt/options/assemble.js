@@ -15,13 +15,5 @@ module.exports = {
 		files: [{
 			'<%= config.app %>/': ['<%= config.src %>/html/pages/{,*/}*.hbs']
 		}]
-	},
-	styleguide: {
-		options: {
-			layout: 'styleguide.hbs'
-		},
-		files: [{
-			'<%= config.app %>/styleguide/': ['<%= config.src %>/html/styleguide/{,*/}*.hbs']
-		}]
 	}
 };
