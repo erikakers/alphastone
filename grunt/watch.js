@@ -4,20 +4,16 @@ module.exports = {
 		files: ['Gruntfile.js']
 	},
 	assemble: {
-		files: ['<%= config.src %>/html/{,*/}*.hbs'],
+		files: ['<%= paths.html %>/{,*/}*.hbs'],
 		tasks: ['assemble', 'prettify']
 	},
 	sass: {
-		files: ['<%= config.src %>/scss/{,*/}*.{scss,sass}'],
+		files: ['<%= paths.scss %>/**/**/**/*.scss'],
 		tasks: ['sass', 'autoprefixer']
 	},
 	javascript: {
-		files: ['<%= config.src %>/javascript/{,*/}*.js'],
-		tasks: ['newer:concat:dev', 'autopolyfiller', 'newer:jshint', 'react']
-	},
-	react: {
-		files: ['<%= config.src %>/javascript/jsx/{,*/}*.jsx'],
-		tasks: ['newer:react']
+		files: ['<%= paths.javascript %>/**/**/*.js'],
+		tasks: ['webpack']
 	},
 	mocha: {
 		files: ['test/{,*/}*.js'],
