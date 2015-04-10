@@ -2,6 +2,7 @@
 test.*
 app
 src/vendor
+*.map
 
 ### SublimeText ###
 # cache files for sublime text
