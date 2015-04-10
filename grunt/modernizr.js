@@ -1,7 +1,7 @@
 module.exports = {
 	dist: {
     "devFile" : "<%= paths.vendor %>/modernizr/modernizr.js",
-    "outputFile" : "<%= config.app %>/scripts/vendor/modernizr.js",
+    "outputFile" : "app/scripts/vendor/modernizr.js",
 
     // Based on default settings on http://modernizr.com/download/
     "extra" : {
