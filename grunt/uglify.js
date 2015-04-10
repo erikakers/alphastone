@@ -1,16 +1,12 @@
 module.exports = {
-	my_target: {
+	build: {
 		files: {
 			// List any Javascript file that need to be minified
-			'<%= config.dist %>/scripts/plugins.min.js': [
-				'<%= config.app %>/scripts/vendor/plugins.js'
+			'app/scripts/app.min.js': [
+				'app/scripts/app.js'
 			],
-			'<%= config.dist %>/scripts/head.min.js': [
-				'<%= config.app %>/scripts/vendor/modernizr.js',
-				'<%= config.app %>/scripts/vendor/head.js'
-			],
-			'<%= config.dist %>/scripts/main.min.js': [
-				'<%= config.app %>/scripts/main.js'
+			'app/scripts/common.min.js' : [
+				'app/scripts/common.js'
 			]
 		}
 	}
