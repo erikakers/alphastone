@@ -13,7 +13,7 @@ module.exports = {
 			layout: 'master.hbs'
 		},
 		files: [{
-			'<%= config.app %>/': ['<%= config.src %>/html/pages/{,*/}*.hbs']
+			'app/': ['<%= config.src %>/html/pages/{,*/}*.hbs']
 		}]
 	}
 };

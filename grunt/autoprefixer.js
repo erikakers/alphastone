@@ -6,9 +6,9 @@ module.exports = {
 	dist: {
 		files: [{
 			expand: true,
-			cwd: '<%= config.app %>/styles/',
+			cwd: 'app/styles/',
 			src: '{,*/}*.css',
-			dest: '<%= config.app %>/styles/'
+			dest: 'app/styles/'
 		}]
 	}
 };

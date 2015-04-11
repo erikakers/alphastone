@@ -24,6 +24,6 @@ module.exports = {
 		cwd: '<%= config.app %>',
 		ext: '.html',
 		src: ['*.html'],
-		dest: '<%= config.app %>'
+		dest: 'app/'
 	}
 };

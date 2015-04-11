@@ -1,0 +1,14 @@
+#Grunt Tasks
+setup:
+  - modernizr
+
+default:
+  - setup
+  - serve
+
+serve:
+  - concurrent:server
+  - prettify
+  - autoprefixer
+  - browserSync
+  - watch
