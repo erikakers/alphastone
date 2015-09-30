@@ -3,7 +3,7 @@ module.exports = {
         options: {
             includePaths: [
                 // Samples for adding other SCSS libraries
-                'src/packages/bourbon/app/assets/stylesheets/'
+                // 'src/packages/bourbon/app/assets/stylesheets/'
             ],
             sourceMap: true
         },
