@@ -1,7 +1,8 @@
 ### Alphastone ###
 test.*
 app
-src/vendor
+!app/assets
+bower
 *.map
 .temp
 
