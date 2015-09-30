@@ -1,1 +1,2 @@
-console.log('hello!');
+/* global DEV */
+console.log('typescript compile');
