@@ -1,5 +1,4 @@
 var webpack = require('webpack');
-var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
 
 var config = {
     dev: {
@@ -41,7 +40,9 @@ var config = {
             modules: true,
             reasons: true
         },
-        plugins: [commonsPlugin]
+        plugins: [
+            new webpack.optimize.CommonsChunkPlugin('common.js')
+        ]
     }
 };
 
