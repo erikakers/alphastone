@@ -1,9 +1,8 @@
 module.exports = {
-	server: [
-		'assemble',
-		'sass',
-		'webpack'
-	],
-	dist: [
-	]
+    server: [
+        'assemble',
+        'sass',
+        'webpack'
+    ],
+    dist: []
 };

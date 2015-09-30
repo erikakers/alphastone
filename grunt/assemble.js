@@ -1,19 +1,19 @@
 module.exports = {
-	options: {
-		layoutdir: '<%= config.src %>/html/layouts',
-		partials: [
-			'<%= config.src %>/html/components/{,*/}*.hbs',
-			'<%= config.src %>/html/elements/{,*/}*.hbs'
-		],
-		data: ['<%= config.src %>/html/data/*.{json,yml}'],
-		flatten: true
-	},
-	pages: {
-		options: {
-			layout: 'master.hbs'
-		},
-		files: [{
-			'app/': ['<%= config.src %>/html/pages/{,*/}*.hbs']
-		}]
-	}
+    options: {
+        layoutdir: '<%= config.src %>/html/layouts',
+        partials: [
+            '<%= config.src %>/html/components/{,*/}*.hbs',
+            '<%= config.src %>/html/elements/{,*/}*.hbs'
+        ],
+        data: ['<%= config.src %>/html/data/*.{json,yml}'],
+        flatten: true
+    },
+    pages: {
+        options: {
+            layout: 'master.hbs'
+        },
+        files: [{
+            'app/': ['<%= config.src %>/html/pages/{,*/}*.hbs']
+        }]
+    }
 };

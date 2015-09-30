@@ -1,9 +1,9 @@
 module.exports = {
-	dist: {
-		files: {
-			'.temp/styles/tidy.css': [
-				'app/{,*/}*.html'
-			]
-		}
-	}
+    dist: {
+        files: {
+            '.temp/styles/tidy.css': [
+                'app/{,*/}*.html'
+            ]
+        }
+    }
 };
