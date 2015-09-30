@@ -5,17 +5,20 @@
   "authors": [
     "Erik Akers <erikakers@gmail.com>"
   ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
   "license": "MIT",
+  "private": true,
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "src/packages",
+    "bower",
     "test",
     "tests"
   ],
   "dependencies": {
-    "modernizr": "~2.8.3",
-    "bourbon": "~4.2.2"
+    "modernizr": "~3.0.0"
   }
 }
