@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "removeComments": false
+    },
+    "exclude": [
+        "node_modules",
+        "app"
+    ]
+}
